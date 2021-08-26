@@ -1,0 +1,35 @@
+dataset:
+  columns:
+  - column-name: row_id
+    data-type: int
+    is-nullable: false
+    value-range-max: 149
+    value-range-min: 0
+  - column-name: sepal length (cm)
+    data-type: float
+    is-nullable: false
+    value-range-max: 7.9
+    value-range-min: 4.3
+  - column-name: sepal width (cm)
+    data-type: float
+    is-nullable: false
+    value-range-max: 4.4
+    value-range-min: 2.0
+  - column-name: petal length (cm)
+    data-type: float
+    is-nullable: false
+    value-range-max: 6.9
+    value-range-min: 1.0
+  - column-name: petal width (cm)
+    data-type: float
+    is-nullable: false
+    value-range-max: 2.5
+    value-range-min: 0.1
+  - column-name: species
+    data-type: str
+    is-nullable: false
+    possible-values: [0, 1, 2]
+  files:
+  - test.csv
+  - train.csv
+  name: Iris Species Classification
