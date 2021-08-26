@@ -1,0 +1,66 @@
+dataset:
+  columns:
+  - column-name: CreditScore
+    data-type: int
+    is-nullable: false
+    value-range-max: 850
+    value-range-min: 350
+  - column-name: Geography
+    data-type: category
+    is-nullable: false
+    possible-values:
+    - France
+    - Germany
+    - Spain
+  - column-name: Gender
+    data-type: category
+    is-nullable: false
+    possible-values:
+    - Female
+    - Male
+  - column-name: Age
+    data-type: int
+    is-nullable: false
+    value-range-max: 92
+    value-range-min: 18
+  - column-name: Tenure
+    data-type: int
+    is-nullable: false
+    value-range-max: 10
+    value-range-min: 0
+  - column-name: Balance
+    data-type: float
+    is-nullable: false
+    value-range-max: 250898.09
+    value-range-min: 0.0
+  - column-name: NumOfProducts
+    data-type: int
+    is-nullable: false
+    value-range-max: 4
+    value-range-min: 1
+  - column-name: HasCrCard
+    data-type: category
+    is-nullable: false
+    possible-values:
+    - 'Yes'
+    - 'No'
+  - column-name: IsActiveMember
+    data-type: category
+    is-nullable: false
+    possible-values:
+    - 'Yes'
+    - 'No'
+  - column-name: EstimatedSalary
+    data-type: float
+    is-nullable: false
+    value-range-max: 199992.48
+    value-range-min: 11.58
+  - column-name: Churned
+    data-type: category
+    is-nullable: false
+    possible-values:
+    - Churned
+    - Not Churned
+  files:
+  - dataset.csv
+  name: bank_churn

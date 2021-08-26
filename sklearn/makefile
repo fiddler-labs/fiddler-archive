@@ -16,12 +16,14 @@ clean:
 	-rm dataset.yaml
 
 build:
-	python3 train.py
 	far build --org $(ORG) --project $(PROJECT) --model $(MODEL) --source .
 
 stop:
 	-docker stop -t 1 $(NAME) 
 	-docker rm $(NAME) 
+
+train:
+	docker run --rm -p 5101:$(PORT) --name=$(NAME) --entrypoint="/app/train/runit.sh" -v `pwd`:/app/train $(NAME):latest 
 
 run:
 	docker run -d -p $(PORT):$(PORT) --name=$(NAME) $(NAME):latest

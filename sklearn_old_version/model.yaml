@@ -1,0 +1,82 @@
+model:
+  custom-explanation-names: []
+  datasets:
+  - sklearn_wind_ds
+  decisions: []
+  description: This is a Regression model using FAR
+  input-type: structured
+  inputs:
+  - column-name: row_id
+    data-type: int
+    is-nullable: false
+    value-range-max: 1598
+    value-range-min: 1
+  - column-name: fixed acidity
+    data-type: float
+    is-nullable: false
+    value-range-max: 15.6
+    value-range-min: 4.6
+  - column-name: volatile acidity
+    data-type: float
+    is-nullable: false
+    value-range-max: 1.04
+    value-range-min: 0.16
+  - column-name: citric acid
+    data-type: float
+    is-nullable: false
+    value-range-max: 0.79
+    value-range-min: 0.0
+  - column-name: residual sugar
+    data-type: float
+    is-nullable: false
+    value-range-max: 12.9
+    value-range-min: 1.2
+  - column-name: chlorides
+    data-type: float
+    is-nullable: false
+    value-range-max: 0.422
+    value-range-min: 0.034
+  - column-name: free sulfur dioxide
+    data-type: float
+    is-nullable: false
+    value-range-max: 52.0
+    value-range-min: 1.0
+  - column-name: total sulfur dioxide
+    data-type: float
+    is-nullable: false
+    value-range-max: 165.0
+    value-range-min: 6.0
+  - column-name: density
+    data-type: float
+    is-nullable: false
+    value-range-max: 1.0032
+    value-range-min: 0.9902
+  - column-name: pH
+    data-type: float
+    is-nullable: false
+    value-range-max: 3.9
+    value-range-min: 2.88
+  - column-name: sulphates
+    data-type: float
+    is-nullable: false
+    value-range-max: 1.34
+    value-range-min: 0.33
+  - column-name: alcohol
+    data-type: float
+    is-nullable: false
+    value-range-max: 14.0
+    value-range-min: 8.4
+  model-task: regression
+  name: Model for predicting wine quality
+  outputs:
+  - column-name: predicted_quality
+    data-type: float
+    is-nullable: false
+    value-range-max: 8.0
+    value-range-min: 3.0
+  targets:
+  - column-name: quality
+    data-type: float
+    is-nullable: false
+    value-range-max: 8.0
+    value-range-min: 3.0
