@@ -21,20 +21,26 @@ cd sklearn
 
 5. To train a model and build a Fiddler Archive:
 ```
-   make stop clean build run
+   make stop clean train build
 ```
 
-5. check if the server is running:
+6. Start the server 
+```
+   make run
+```
+
+
+7. check if the server is running:
 ```
    make logs
 ```
 
-6. To call predict on a row at specifed index:  
+8. To call predict on a row at specifed index:  
 ```
    make execute index=20
 ```
 
- 7. To explan an infrence:
+ 9. To explan an infrence:
 ```
    make explain index=20
 ```
