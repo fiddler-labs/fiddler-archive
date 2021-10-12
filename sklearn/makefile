@@ -15,7 +15,10 @@ clean:
 	-rm model.yaml
 	-rm dataset.yaml
 
-build:
+build-train-env:
+	far build --train true --org $(ORG) --project $(PROJECT) --model $(MODEL) --source .
+
+package:
 	far build --org $(ORG) --project $(PROJECT) --model $(MODEL) --source .
 
 stop:
@@ -23,7 +26,7 @@ stop:
 	-docker rm $(NAME) 
 
 train:
-	docker run --rm -p 5101:$(PORT) --name=$(NAME) --entrypoint="/app/train/runit.sh" -v `pwd`:/app/train $(NAME):latest 
+	docker run --rm -p 5101:$(PORT) --name=$(NAME) --entrypoint="/app/train/train.sh" -v `pwd`:/app/train $(NAME):latest 
 
 run:
 	docker run -d -p $(PORT):$(PORT) --name=$(NAME) $(NAME):latest
