@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 ORG=myorg
 PROJECT=far_samples
-MODEL=sklearn_wine
+MODEL=onnx_iris
 PORT=5100
 index=15
 
@@ -11,7 +11,7 @@ NAME=$(ORG)-$(PROJECT)-$(MODEL)
 default: all
 
 clean:
-	-rm model.pkl
+	-rm rf_iris.onnx 
 	-rm model.yaml
 	-rm dataset.yaml
 
