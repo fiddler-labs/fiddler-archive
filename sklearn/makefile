@@ -8,7 +8,7 @@ index=15
 
 NAME=$(ORG)-$(PROJECT)-$(MODEL)
 
-default: build
+default: all
 
 clean:
 	-rm model.pkl
@@ -44,20 +44,20 @@ logs:
 	docker logs $(NAME)
 
 all:
-	echo 'Cleaning up'
+	printf '\n\nCleaning up\n\n'
 	make stop
 	make clean
         
-	echo 'Model training'
+	printf '\n\nModel training\n\n'
 	make build-train-env
 	make train
 	make package
 
-	echo 'Run server'
+	printf '\n\nRun server\n\n'
 	make run
-	sleep 3
+	sleep 10 
 	make logs
 
-	echo 'Run tests'
+	printf '\n\nRun tests\n\n'
 	make execute index=10 
 	make explain index=20 
