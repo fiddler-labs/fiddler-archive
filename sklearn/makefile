@@ -43,3 +43,21 @@ ssh:
 logs:
 	docker logs $(NAME)
 
+all:
+	echo 'Cleaning up'
+	make stop
+	make clean
+        
+	echo 'Model training'
+	make build-train-env
+	make train
+	make package
+
+	echo 'Run server'
+	make run
+	sleep 3
+	make logs
+
+	echo 'Run tests'
+	make execute index=10 
+	make explain index=20 
